@@ -1,2 +1,92 @@
-# SpringCodingStyleGuide
-ìŠ¤í”„ë§ ì½”ë”© ìŠ¤íƒ€ì¼ ê°€ì´ë“œ
+# À§´ÏÅØ ½ºÇÁ¸µ ÄÚµù ½ºÅ¸ÀÏ °¡ÀÌµå
+
+## 1. ¼Ò°³
+
+ÀÌ ¹®¼­´Â 2019³â 05¿ù 31ÀÏ ±âÁØÀÇ À§´ÏÅØ ½ºÇÁ¸µ ÄÚµù ½ºÅ¸ÀÏ °¡ÀÌµå ¹®¼­·Î¼­<br>
+ÀÚ¹Ù, SQL, Groovy, Config, XML µîÀÇ ÄÚµùÀÇ Ç¥ÁØÀ» Á¤ÀÇÇÑ °ÍÀÔ´Ï´Ù.<br>
+±¸±Û ½ºÅ¸ÀÏ °¡ÀÌµå(https://google.github.io/styleguide/javaguide.html) ¹®¼­¸¦ ÂüÁ¶ÇÏ¿´½À´Ï´Ù.<br>
+
+## 2. ¼Ò½º ÆÄÀÏ ±âº» »çÇ×
+
+### 2.1 ÆÄÀÏ ÀÌ¸§
+
+1) Java, Groovy, Jsp, Html, Asciidoc ÆÄÀÏ¸íÀÇ µé¾î°¡´Â ´Ü¾îÀÇ Ã¹¹®ÀÚ´Â ´ë¹®ÀÚ·Î ½ÃÀÛÇÏ¸ç ³ª¸ÓÁö´Â ¼Ò¹®ÀÚ·Î ±¸¼ºÇÕ´Ï´Ù.<br>
+¿¹) JobService.java, Vl01001S.java, CustomPassEncoding.groovy
+
+2) Xml, sql, ini ÆÄÀÏ¸íÀº ¸ðµÎ ¼Ò¹®ÀÚ·Î ±¸¼ºÇÕ´Ï´Ù.<br>
+¿¹) default.xml, createdb.sql, config.ini
+
+3) ÆÐÅ°Áö, Æú´õ¸íÀº ¸ðµÎ ¼Ò¹®ÀÚ·Î ±¸¼ºÇÕ´Ï´Ù. (WEB-INF Á¦¿Ü)<br>
+¿¹) com.winitech.json
+
+### 2.2 ÆÄÀÏ ÀÎÄÚµù : UTF-8
+
+1) ¼Ò½º ÆÄÀÏÀº UTF-8·Î ÀÎÄÚµùÇÕ´Ï´Ù.
+
+## 3. ¼Ò½º ÆÄÀÏ ±¸Á¶
+
+¼Ò½º ÆÄÀÏÀº ´ÙÀ½ ¼ø¼­·Î ±¸¼ºµË´Ï´Ù.
+
+### 3.1 ¶óÀÌ¼¾½º ¶Ç´Â ÀúÀÛ±Ç Á¤º¸(ÀÖ´Â°æ¿ì)
+
+¶óÀÌ¼¾½º ¶Ç´Â ÀúÀÛ±Ç Á¤º¸°¡ ÆÄÀÏ¿¡ ¼ÓÇÏ¸é ¿©±â¿¡ ¼ÓÇÕ´Ï´Ù.
+
+### 3.2 Package ¸í¼¼¼­
+
+1) package ¹®Àº ÁÙ¹Ù²ÞÀÌ µÇÁö ¾Ê½À´Ï´Ù. ¿­ Á¦ÇÑ (4.4 Àý) Àº Àû¿ëµÇÁö ¾Ê½À´Ï´Ù (¿¹. package com.winitech.avl.service.cron;)
+2) ÆÐÅ°Áö´Â ±âº»ÀûÀ¸·Î ¸ðµÎ ¼Ò¹®ÀÚÀÔ´Ï´Ù.
+
+### 3.3 Import ¸í¼¼¼­
+
+1) ¿ÍÀÏµåÄ«µå »ç¿ëÀº Çã¿ëµÇÁö ¾Ê½À´Ï´Ù.
+2) ÁÙ ¹Ù²Ù±â Çã¿ëµÇÁö¾Ê½À´Ï´Ù. ¿­ Á¦ÇÑ (4.4 Àý) Àº Àû¿ëµÇÁö ¾Ê½À´Ï´Ù
+3) ¸ðµç ºñ static, static import ´Â °¢°¢ ´ÜÀÏ ºí·ÏÀ¸·Î ±¸¼ºµÇ¸ç µÎ ºí·Ï »çÀÌ´Â ºó ÁÙ·Î ºÐ¸®ÇÕ´Ï´Ù.
+4) static class´Â static import·Î ºÒ·¯¿ÀÁö ¾Ê½À´Ï´Ù.
+
+### 3.4 Å¬·¡½º ¼±¾ð
+
+1) °¢ ÃÖ»óÀ§ Å¬·¡½º¸¦ ÃÖ»óÀ§¿¡ µÓ´Ï´Ù.
+2) Å¬·¡½ºÀÇ ÀÌ¸§Àº ÀÏ¹ÝÀûÀ¸·Î ¸í»çÀÌ¸ç °¢ ´Ü¾îÀÇ ½ÃÀÛÀº ´ë¹®ÀÚ·Î ½ÃÀÛÇÕ´Ï´Ù, ±×¿Ü¿¡´Â ¼Ò¹®ÀÚÀÔ´Ï´Ù.
+3) Å¬·¡½ºÀÇ ¸â¹ö ¹× ÃÊ±âÈ­¿¡ ´ëÇØ¼­´Â ÁöÁ¤µÈ ¹æ¹ýÀÌ ¾ø½À´Ï´Ù.
+
+### 3.5 ¸Þ¼Òµå ¼±¾ð
+
+1) ¸Þ¼ÒµåÀÇ ÀÌ¸§Àº ÀÏ¹ÝÀûÀ¸·Î µ¿»ç·Î ½ÃÀÛÇÏ¸ç Ã¹´Ü¾î´Â ¼Ò¹®ÀÚÀÌ°í ÀÌÈÄ ´Ü¾îÀÇ ½ÃÀÛÀº ´ë¹®ÀÚ·Î ½ÃÀÛÇÕ´Ï´Ù, ±×¿Ü¿¡´Â ¼Ò¹®ÀÚÀÔ´Ï´Ù.
+
+## 4. ±âÅ¸ ¼­½Ä ÁöÁ¤
+
+### 4.1 °ýÈ£(Braces)
+
+- Áß°ýÈ£
+
+1) If, else, for do ¹× while ¹®ÀÇ Áß°ýÈ£´Â ÇÊ¼ö°¡ ¾Æ´Ï¶ó ¼±ÅÃÀûÀ¸·Î Àû¿ëÇÕ´Ï´Ù.
+2) ¿©´Â Áß°ýÈ£ ¾Õ¿¡´Â ÁÙ¹Ù²ÞÀÌ ¾ø½À´Ï´Ù.
+3) ¿©´Â Áß°ýÈ£ µÚ¿¡´Â ÁÙ ¹Ù²Þ ÇÕ´Ï´Ù.
+4) ´Ý´Â Áß°ýÈ£ ¾Õ¿¡ ÁÙ¹Ù²ÞÀ» ÇÕ´Ï´Ù.
+5) ¿ÏÀüÈ÷ ¹®À» Á¾·áÇÏ´Â Áß°ýÈ£ÀÇ °æ¿ì¿¡¸¸ ÁÙ¹Ù²ÞÀ» ÇÕ´Ï´Ù. else³ª ½°Ç¥°¡ ¿À°ÔµÇ¸é ÁÙ¹Ù²Þ ÇÏÁö ¾ÊÀ½
+6) ´ÜÀÏÇàÀÇ ºóºí·ÏÀÇ °æ¿ì {} °°Àº ÇüÅÂÇã¿ë
+
+### 4.2 µé¿©¾²±â
+
+1) »õ·Î¿î ºí·Ï ¶Ç´Â ºí·Ï°ú °°Àº ±¸Á¶°¡ ¿­¸±¶§¸¶´Ù µé¿©¾²±â, ÁÖ¼®°ú ÄÚµå ¸ðµÎ Æ÷ÇÔÇÕ´Ï´Ù
+
+### 4.3 ÇÑÁÙ¿¡ ÇÏ³ªÀÇ ¹®Àå
+
+1) °¢ ¸í·É¹® ´ÙÀ½¿¡ ÁÙ ¹Ù²ÞÀ» ½ÇÇàÇÕ´Ï´Ù.
+
+### 4.4 ¿­Á¦ÇÑ
+
+1) ÇÑÁÙ¿¡ Çã¿ëÇÏ´Â ±ÛÀÚ ¼ö´Â 100±ÛÀÚÀÔ´Ï´Ù. (package, import µîÀÇ ¿¹¿Ü Á¦¿Ü)
+
+### 4.5 º¯¼ö
+
+1) ÇÑ ¶óÀÎ¿¡ ÇÏ³ª¸¸ ¼±¾ðÇÕ´Ï´Ù. int a, b ´Â »ç¿ëÇÏÁö¾Ê½À´Ï´Ù. (for ·çÇÁ Çì´õ´Â ¿¹¿Ü)
+2) ÀÇ¹Ì¸¦ ºÎ¿©ÇÏ°í ¼Ò¹®ÀÚ·Î ½ÃÀÛÇÏ¸ç Ã¹´Ü¾î¸¦ Á¦¿ÜÇÏ°í´Â ´Ü¾î´ç Ã¹¹®ÀÚ°¡ ´ë¹®ÀÚ·Î »ç¿ëÇÏµµ·Ï ÇÕ´Ï´Ù.
+
+### 4.6 ÁÖ¼®
+
+1) ÇÑ ºí·ÏÀ» À§ÇÑ ÄÚ¸àÆ®´Â ±× ºí·Ï°ú µ¿ÀÏÇÑ ·¹º§·Î µé¿©¾²±â ÇÕ´Ï´Ù.
+
+### 4.7 ¼ýÀÚ ¸®ÅÍ·²
+
+1) longÀ» »ç¿ëÇÑ °æ¿ì ´ë¹®ÀÚ LÀ» Á¢¹Ì»ç·Î »ç¿ëÇÕ´Ï´Ù (ex 3000000L)
